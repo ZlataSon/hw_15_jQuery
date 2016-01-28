@@ -1,0 +1,50 @@
+/*===================
+   placeholders header
+   ====================*/
+
+header form {
+  position: relative;
+  margin-right: 0;
+  float: left;
+  margin-left: 5%;
+  input {
+    outline: none;
+    border: none;
+  }
+
+  input[type="search"] {
+    background-color: rgba(104, 95, 83, 0.25);
+    min-width: 200px;
+    height: 35px;
+    border-radius: 2px;
+    padding: 0 15px;
+    color: rgba(255, 255, 255, 0.25);
+  }
+  input[type="image"] {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    margin-top: -10px;
+  }
+}
+
+/*===================
+   placeholders main page-1
+   ====================*/
+
+input[type="text"], input[type="email"] {
+  background-color: #ffffff;
+
+  height: 45px;
+  border-radius: 2px;
+  padding: 0 15px;
+  color: rgb(175, 175, 175);
+}
+
+.form-inline .form-control {
+  display: inline-block;
+  width: 230px;
+  vertical-align: middle;
+}
+
+

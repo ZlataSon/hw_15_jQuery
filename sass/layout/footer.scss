@@ -1,0 +1,43 @@
+/*===================
+ footer
+ ====================*/
+
+footer {
+  background: $bg-dark;
+}
+
+/*===================
+ first
+ ====================*/
+
+.first {
+  margin: 50px auto 15px auto;
+  color: $text-footer;
+  font-size: 0.75em;
+  font-weight: 300;
+  line-height: 1em;
+
+  div {
+    padding: 5px 5px;
+  }
+}
+
+/*===================
+ end footer
+ ====================*/
+
+.end {
+  margin: 33px auto 37px auto;
+
+  a {
+    margin: 5px 5px 21px 5px;
+    color: #ffffff;
+    font-size: 0.75em;
+    font-weight: 400;
+
+    &:hover, &:focus {
+      color: $bg-bright;
+      text-decoration: none;
+    }
+  }
+}

@@ -1,0 +1,165 @@
+/*===================
+ header
+ ====================*/
+
+/*===================
+ navbar dropdown
+ ====================*/
+header {
+  .container-fluid > .navbar-collapse, .container-fluid > .navbar-header, .container > .navbar-collapse, .container > .navbar-header {
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
+
+header {
+  background: #c2bcb7 url("../img/bg-head.png") no-repeat scroll center top;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  form {
+    margin: 15px 10px;
+  }
+
+  .search {
+    display: inline-block;
+    padding: 15px 10px;
+  }
+
+  .navbar-default {
+    background-color: transparent;
+    border-color: #ffffff;
+  }
+
+  .navbar-default .navbar-toggle:hover {
+    background-color: $bg-bright;
+    border-color: $bg-dark;
+  }
+
+  .nav > li > a {
+    font-size: 1.125em;
+    line-height: 1em;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 20px 5px;
+
+    &:hover, &focus {
+      background: transparent;
+      color: $bg-bright;
+      text-decoration: none;
+    }
+
+    &:active, &:link, &:visited {
+      background: transparent;
+    }
+  }
+
+  .dropdown-menu > li > a {
+    font-size: 0.75em;
+    line-height: 1em;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 5px 5px;
+
+    &:hover, &focus {
+      background-color: transparent;
+      color: $bg-bright;
+      text-decoration: none;
+    }
+
+    &:active, &:link, &:visited {
+      background: transparent;
+    }
+  }
+
+  .dropdown-menu {
+    background: url("../img/bg-dropdown.png") no-repeat scroll center top;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    min-width: 500px;
+    height: auto;
+    padding: 5px;
+    background-color: transparent;
+    background-size: cover;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.176);
+  }
+}
+
+.nav .open > a, .nav .open > a:focus, .nav .open > a:hover, .nav .open > a:link, .nav .open > a:visited {
+  background-color: transparent;
+  border-color: transparent;
+}
+
+/// menu-burger 320px-900px
+
+@media (min-width: 320px) and (max-width: 900px) {
+  .navbar-collapse.collapse {
+    display: none !important;
+  }
+  .navbar-collapse.collapse.in {
+    display: block !important;
+  }
+  .navbar-header .collapse, .navbar-toggle {
+    display: block !important;
+  }
+  .navbar-header {
+    float: none;
+  }
+
+  header .dropdown-menu {
+    background: #474747;
+    opacity: 0.65;
+    min-width: 100%;
+    float: right;
+  }
+
+  header .dropdown-menu li {
+    width: 100%;
+    white-space: nowrap;
+    text-overfolow: ellipsis;
+    overflow: hidden;
+    text-align: right;
+  }
+}
+
+/*===================
+   dropdown menu 2 col
+   ====================*/
+
+@media (min-width: 900px) {
+  header .dropdown-menu li {
+    float: right;
+    width: 50%;
+    white-space: nowrap;
+    text-overfolow: ellipsis;
+    overflow: hidden;
+  }
+
+  /*===================
+   випадаюче меню без кліка
+   ====================*/
+
+  header ul.nav li.dropdown:hover > ul.dropdown-menu {
+    display: block;
+  }
+
+}
+
+@media (min-width: 768px) {
+  header .navbar-nav {
+    float: right;
+    margin: 0px;
+  }
+}
+
+
+
+
+
+
