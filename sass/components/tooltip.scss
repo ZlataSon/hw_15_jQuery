@@ -15,7 +15,7 @@
   }
 }
 
-.tooltip{
+.tooltip {
   position:absolute;
   z-index:999;
   left:-9999px;
@@ -25,11 +25,11 @@
   width: auto;
 }
 
-.tooltip p{
+.tooltip p {
   margin:0;
-  color:#fff;
+  color:$bg-dark;
   background-color: $bg-bright;
-  padding: 2px 7px;
+  padding: 5px 10px;
 }
 
 

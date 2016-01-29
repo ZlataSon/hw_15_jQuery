@@ -1,6 +1,24 @@
 /**
- * Created by lime on 28.01.16.
+ * header  hamburger
  */
+
+$(document).ready(function(){
+    var touch 	= $('#touch-menu');
+    var menu 	= $('.menu');
+
+    $(touch).on('click', function(e) {
+        e.preventDefault();
+        menu.slideToggle();
+    });
+
+    $(window).resize(function(){
+        var w = $(window).width();
+        if(w > 860 && menu.is(':hidden')) {
+            menu.removeAttr('style');
+        }
+    });
+
+});
 
 
 /**
@@ -56,14 +74,14 @@ function simple_tooltip(target_items, name){
         $(this).removeAttr("title").mouseover(function(){
             my_tooltip.css({opacity:0.8, display:"none"}).fadeIn(400);
         }).mousemove(function(kmouse){
-            my_tooltip.css({left:kmouse.pageX+15, top:kmouse.pageY+15});
+            my_tooltip.css({left:kmouse.pageX+10, top:kmouse.pageY+10});
         }).mouseout(function(){
-            my_tooltip.fadeOut(400);
+            my_tooltip.fadeOut(300);
         });
     });
 }
 $(document).ready(function(){
-    simple_tooltip("a","tooltip");
+    simple_tooltip(".part-tooltip a","tooltip");
 });
 
 

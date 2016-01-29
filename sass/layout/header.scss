@@ -2,161 +2,180 @@
  header
  ====================*/
 
-/*===================
- navbar dropdown
- ====================*/
 header {
-  .container-fluid > .navbar-collapse, .container-fluid > .navbar-header, .container > .navbar-collapse, .container > .navbar-header {
-    margin-right: 0;
-    margin-left: 0;
-  }
-}
+  background: $bg-dark;
+  margin: 33px auto 37px auto;
 
-header {
-  background: #c2bcb7 url("../img/bg-head.png") no-repeat scroll center top;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-
-  form {
-    margin: 15px 10px;
-  }
-
-  .search {
-    display: inline-block;
-    padding: 15px 10px;
-  }
-
-  .navbar-default {
-    background-color: transparent;
-    border-color: #ffffff;
-  }
-
-  .navbar-default .navbar-toggle:hover {
-    background-color: $bg-bright;
-    border-color: $bg-dark;
-  }
-
-  .nav > li > a {
-    font-size: 1.125em;
-    line-height: 1em;
+  a {
+    margin: 5px 5px 21px 5px;
     color: #ffffff;
-    text-decoration: none;
-    padding: 20px 5px;
-
-    &:hover, &focus {
-      background: transparent;
-      color: $bg-bright;
-      text-decoration: none;
-    }
-
-    &:active, &:link, &:visited {
-      background: transparent;
-    }
-  }
-
-  .dropdown-menu > li > a {
     font-size: 0.75em;
-    line-height: 1em;
-    color: #ffffff;
-    text-decoration: none;
-    padding: 5px 5px;
+    font-weight: 400;
 
-    &:hover, &focus {
-      background-color: transparent;
+    &:hover, &:focus {
       color: $bg-bright;
       text-decoration: none;
     }
-
-    &:active, &:link, &:visited {
-      background: transparent;
-    }
-  }
-
-  .dropdown-menu {
-    background: url("../img/bg-dropdown.png") no-repeat scroll center top;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    min-width: 500px;
-    height: auto;
-    padding: 5px;
-    background-color: transparent;
-    background-size: cover;
-    background-clip: padding-box;
-    border: 1px solid rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
-    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.176);
-  }
-}
-
-.nav .open > a, .nav .open > a:focus, .nav .open > a:hover, .nav .open > a:link, .nav .open > a:visited {
-  background-color: transparent;
-  border-color: transparent;
-}
-
-/// menu-burger 320px-900px
-
-@media (min-width: 320px) and (max-width: 900px) {
-  .navbar-collapse.collapse {
-    display: none !important;
-  }
-  .navbar-collapse.collapse.in {
-    display: block !important;
-  }
-  .navbar-header .collapse, .navbar-toggle {
-    display: block !important;
-  }
-  .navbar-header {
-    float: none;
-  }
-
-  header .dropdown-menu {
-    background: #474747;
-    opacity: 0.65;
-    min-width: 100%;
-    float: right;
-  }
-
-  header .dropdown-menu li {
-    width: 100%;
-    white-space: nowrap;
-    text-overfolow: ellipsis;
-    overflow: hidden;
-    text-align: right;
   }
 }
 
 /*===================
-   dropdown menu 2 col
+ header  hamburger
+ ====================*/
+
+header {
+  .menu {
+    display: block;
+  }
+
+  .menu li{
+    display: inline-block;
+    position: relative;
+    z-index: 100;
+  }
+
+  .menu li a {
+    font-weight: 600;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+
+    -webkit-transition: all 0.2s ease-in-out 0s;
+    -moz-transition: all 0.2s ease-in-out 0s;
+    -o-transition: all 0.2s ease-in-out 0s;
+    -ms-transition: all 0.2s ease-in-out 0s;
+    transition: all 0.2s ease-in-out 0s;
+  }
+
+  .menu li a:hover, .menu li:hover > a{
+    color:#ffffff;
+    text-decoration: none;
+    background:  $bg-bright;
+  }
+
+  .lg-menu {
+    font-size: 1em;
+    text-transform: uppercase;
+  }
+
+  /* hide the second level menu */
+  .menu ul {display: none;
+    margin: 0;
+    padding: 0;
+    width: 150px;
+    position: absolute;
+    top: 43px;
+    left: 0px;
+    background: $bg-dark;
+  }
+
+  /* display second level menu on hover */
+  .menu li:hover > ul{ display: block;}
+
+  .menu ul li {display:block;
+    float: none;
+    background:none;
+    margin:0;
+    padding:0;
+  }
+
+  .menu ul li a {
+    font-size:12px;
+    font-weight:normal;
+    display:block;
+    color: #ffffff;
+    background: $bg-dark;}
+
+  .menu ul li a:hover, .menu ul li:hover > a{
+    background: $bg-bright;
+    color: $bg-dark;
+  }
+
+  /* change level 3 menu positions */
+  .menu ul ul {left: 149px;
+    top: 0;
+  }
+}
+
+/*===================
+   mobile menu
    ====================*/
 
-@media (min-width: 900px) {
-  header .dropdown-menu li {
-    float: right;
-    width: 50%;
-    white-space: nowrap;
-    text-overfolow: ellipsis;
-    overflow: hidden;
-  }
+header {
+  .mobile-menu {
+    display: none;
+    width: 100%;
+    padding: 10px;
+    background: $bg-bright;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.5em;
 
+    &:hover, &:focus, &:active {
+      background: #af8200;
+      color: #ffffff;
+      text-decoration: none;
+    }
+  }
+  @media (max-width: 870px) {
+
+    .menu {
+      display:none;
+    }
+
+    .mobile-menu{
+      display:block;
+      margin-top: 50px;
+    }
+
+    nav{
+      margin:0;
+      background:none;
+    }
+
+    .menu li {
+      display:block;
+      margin:0;
+    }
+
+    .menu li a {
+      background: $bg-dark;
+      color: #ffffff;
+      border-top:1px solid #ffffff;
+      border-left:3px solid #ffffff;}
+
+    .menu li a:hover, .menu li:hover > a{
+      background: $bg-bright;
+      color: $bg-dark;
+      border-top:1px solid #ffffff;
+      border-left:3px solid #ffffff;
+    }
+
+    /*level 2 and 3 - make same width as all items*/
+    .menu ul {
+      display:block;
+      position:relative;
+      top:0;
+      left:0;
+      width:100%;
+      text-align: center;
+    }
+
+    .menu ul ul {
+      left: 0;
+      text-align: right;
+    }
+
+  }/*end media queries*/
+}
   /*===================
    випадаюче меню без кліка
    ====================*/
 
-  header ul.nav li.dropdown:hover > ul.dropdown-menu {
+header ul.nav li.dropdown:hover > ul.dropdown-menu {
     display: block;
   }
-
-}
-
-@media (min-width: 768px) {
-  header .navbar-nav {
-    float: right;
-    margin: 0px;
-  }
-}
 
 
 
