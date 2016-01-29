@@ -43,70 +43,185 @@
     <main>
 
         <!-- accordion -->
+
         <div class="accordion">
-
-                <div class="accordion-item">
-                    Item 1
-                    <div class="type"></div>
-                </div>
-                <div class="data">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                    industry's standard dummy text ever since the 1500s,
-                </div>
-                <div class="accordion-item">
-                    Item 2
-                    <div class="type"></div>
-                </div>
-                <div class="data">
-                    when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has
-                    survived not only five centuries, but also the leap into electronic typesetting, remaining
-                    essentially unchanged.
-                </div>
-                <div class="accordion-item">
-                    Item 3
-                    <div class="type"></div>
-                </div>
-                <div class="data">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                    industry's standard dummy text ever since the 1500s,
-                </div>
-
+            <div class="container-fluid">
+                <h2>1. Accordion</h2>
+                <dl>
+                    <dt>Item 1</dt>
+                    <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam ea, accusamus. Numquam non
+                        commodi ipsum debitis repudiandae amet vero itaque, deserunt, ad neque libero quae officia.
+                        Facilis non, possimus doloribus! Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        Aliquid quis voluptatem repellat? Blanditiis iste, exercitationem porro, magni amet cupiditate
+                        enim, labore tenetur, praesentium quam consequuntur nesciunt. Culpa dicta adipisci voluptatem.
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>Item 2</dt>
+                    <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid quis voluptatem repellat?
+                        Blanditiis iste, exercitationem porro, magni amet cupiditate enim, labore tenetur, praesentium
+                        quam consequuntur nesciunt. Culpa dicta adipisci voluptatem.
+                        <ul>
+                            <li>Lorem</li>
+                            <li>Lorem</li>
+                            <li>Lorem</li>
+                        </ul>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>Item 3</dt>
+                    <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam ea, accusamus. Numquam non
+                        commodi ipsum debitis repudiandae amet vero itaque, deserunt, ad neque libero quae officia.
+                        Facilis non, possimus doloribus! Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        Aliquid quis voluptatem repellat? Blanditiis iste, exercitationem porro, magni amet cupiditate
+                        enim, labore tenetur, praesentium quam consequuntur nesciunt. Culpa dicta adipisci voluptatem.
+                        <p>Aliquid quis voluptatem repellat? Blanditiis iste, exercitationem porro, magni amet
+                            cupiditate
+                            enim, labore tenetur, praesentium quam consequuntur nesciunt. Culpa dicta adipisci
+                            voluptatem.</p>
+                    </dd>
+                </dl>
+            </div>
         </div>
 
+
         <!-- modal -->
-        <div class="modal">
+        <div>
             <div class="container-fluid">
+                <h2>2. Modal</h2>
 
             </div>
         </div>
 
         <!-- tabs -->
-        <div class="tabs">
+        <div>
             <div class="container-fluid">
+                <h2>3. Tabs</h2>
 
+                <div id="tabs">
+                    <!-- Вкладки выполнены в виде списка с якорными ссылками -->
+                    <ul class="tabs">
+                        <li class="tab active"><a href="#description" class="active" title="Tooltip">Part 1</a></li>
+                        <li class="tab"><a href="#params" title="Tooltip">Part 2</a></li>
+                        <li class="tab"><a href="#replay" title="Tooltip">Part 3</a></li>
+                    </ul>
+                    <!-- Содержимое каждой вкладки имеет id в соответствии с якорной ссылкой -->
+                    <div class="tabs-content">
+                        <div id="description">
+                            <p>Proin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec arcu.
+                                Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante. Etiam
+                                aliquet
+                                massa et lorem. Mauris dapibus lacus auctor risus. Aenean tempor ullamcorper leo.
+                                Vivamus
+                                sed magna quis ligula eleifend adipiscing. Duis orci. Aliquam sodales tortor vitae
+                                ipsum.
+                                Aliquam nulla. Duis aliquam molestie erat. Ut et mauris vel pede varius sollicitudin.
+                                Sed ut
+                                dolor nec orci tincidunt interdum. Phasellus ipsum. Nunc tristique tempus lectus.</p>
+                        </div>
+                        <div id="params">
+                            <p>Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra
+                                massa
+                                metus id nunc. Duis scelerisque molestie turpis. Sed fringilla, massa eget luctus
+                                malesuada,
+                                metus eros molestie lectus, ut tempus eros massa ut dolor. Aenean aliquet fringilla sem.
+                                Suspendisse sed ligula in ligula suscipit aliquam. Praesent in eros vestibulum mi
+                                adipiscing
+                                adipiscing. Morbi facilisis. Curabitur ornare consequat nunc. Aenean vel metus. Ut
+                                posuere
+                                viverra nulla. Aliquam erat volutpat. Pellentesque convallis. Maecenas feugiat, tellus
+                                pellentesque pretium posuere, felis lorem euismod felis, eu ornare leo nisi vel felis.
+                                Mauris consectetur tortor et purus.</p>
+                        </div>
+                        <div id="replay">
+                            <p>Mauris eleifend est et turpis. Duis id erat. Suspendisse potenti. Aliquam vulputate, pede
+                                vel vehicula accumsan, mi neque rutrum erat, eu congue orci lorem eget lorem. Vestibulum
+                                non ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+                                inceptos himenaeos. Fusce sodales. Quisque eu urna vel enim commodo pellentesque.
+                                Praesent eu risus hendrerit ligula tempus pretium. Curabitur lorem enim, pretium nec,
+                                feugiat nec, luctus a, lacus.</p>
+
+                            <p>Duis cursus. Maecenas ligula eros, blandit nec, pharetra at, semper at, magna. Nullam ac
+                                lacus. Nulla facilisi. Praesent viverra justo vitae neque. Praesent blandit adipiscing
+                                velit. Suspendisse potenti. Donec mattis, pede vel pharetra blandit, magna ligula
+                                faucibus eros, id euismod lacus dolor eget odio. Nam scelerisque. Donec non libero sed
+                                nulla mattis commodo. Ut sagittis. Donec nisi lectus, feugiat porttitor, tempor ac,
+                                tempor vitae, pede. Aenean vehicula velit eu tellus interdum rutrum. Maecenas commodo.
+                                Pellentesque nec elit. Fusce in lacus. Vivamus a libero vitae lectus hendrerit
+                                hendrerit.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
         <!-- tooltip -->
-        <div class="tooltip">
+        <div class="part-tooltip">
             <div class="container-fluid">
-
+                <h2>4. Tooltip</h2>
+                <a href="#" title="Tooltip">Tooltips are also useful for form elements, to show some additional
+                    information in the context of each field.</a>
+                <p>Duis cursus. Maecenas ligula eros, blandit nec, pharetra at, semper at, magna. Nullam ac
+                    lacus. Nulla facilisi. Praesent viverra justo vitae neque. Praesent blandit adipiscing
+                    velit. Suspendisse potenti. Donec mattis, pede vel pharetra blandit, magna ligula
+                    faucibus eros, id euismod lacus dolor eget odio. Nam scelerisque. Donec non libero sed
+                    nulla mattis commodo. Ut sagittis. Donec nisi lectus, feugiat porttitor, tempor ac,
+                    tempor vitae, pede. Aenean vehicula velit eu tellus interdum rutrum. Maecenas commodo.
+                    Pellentesque nec elit.
+                    <a href="#" title="Tooltip">Tooltips are also useful for form elements, to show some additional
+                        information in the context of each field.</a>
+                    Fusce in lacus. Vivamus a libero vitae lectus hendrerit
+                    hendrerit.</p>
+                <a href="#" title="Tooltip">Tooltips are also useful for form elements, to show some additional
+                    information in the context of each field.</a>
+                <div class="tooltip">
+                    <p>Tooltip</p>
+                </div>
             </div>
         </div>
 
         <!-- slide 1 -->
         <div class="slide_1">
             <div class="container-fluid">
+                <h2>5. Slide-1</h2>
+                <div id="owl-demo-1" class="owl-carousel owl-theme">
+
+                    <div class="item"><img src="img/owl1.jpg" alt="The Last of us"></div>
+                    <div class="item"><img src="img/owl4.jpg" alt="GTA V"></div>
+                    <div class="item"><img src="img/owl5.jpg" alt="Mirror Edge"></div>
+
+                </div>
 
             </div>
         </div>
 
         <!-- slide 2 -->
-        <article class="slide_2">
+        <div class="slide_2">
             <div class="container-fluid">
+                <h2>6. Slide-2</h2>
+
+                <div id="owl-demo-2" class="owl-carousel">
+                    <div class="item"><img class="lazyOwl" data-src="img/owl1.jpg" alt="Lazy Owl Image"/></div>
+                    <div class="item"><img class="lazyOwl" data-src="img/owl2.jpg" alt="Lazy Owl Image"/></div>
+                    <div class="item"><img class="lazyOwl" data-src="img/owl3.jpg" alt="Lazy Owl Image"/></div>
+                    <div class="item"><img class="lazyOwl" data-src="img/owl4.jpg" alt="Lazy Owl Image"/></div>
+                    <div class="item"><img class="lazyOwl" data-src="img/owl5.jpg" alt="Lazy Owl Image"/></div>
+                    <div class="item"><img class="lazyOwl" data-src="img/owl6.jpg" alt="Lazy Owl Image"/></div>
+                    <div class="item"><img class="lazyOwl" data-src="img/owl7.jpg" alt="Lazy Owl Image"/></div>
+                    <div class="item"><img class="lazyOwl" data-src="img/owl8.jpg" alt="Lazy Owl Image"/></div>
+                    <div class="item"><img class="lazyOwl" data-src="img/owl1.jpg" alt="Lazy Owl Image"/></div>
+                    <div class="item"><img class="lazyOwl" data-src="img/owl2.jpg" alt="Lazy Owl Image"/></div>
+                    <div class="item"><img class="lazyOwl" data-src="img/owl3.jpg" alt="Lazy Owl Image"/></div>
+                    <div class="item"><img class="lazyOwl" data-src="img/owl4.jpg" alt="Lazy Owl Image"/></div>
+                    <div class="item"><img class="lazyOwl" data-src="img/owl5.jpg" alt="Lazy Owl Image"/></div>
+                    <div class="item"><img class="lazyOwl" data-src="img/owl6.jpg" alt="Lazy Owl Image"/></div>
+                    <div class="item"><img class="lazyOwl" data-src="img/owl7.jpg" alt="Lazy Owl Image"/></div>
+                    <div class="item"><img class="lazyOwl" data-src="img/owl8.jpg" alt="Lazy Owl Image"/></div>
+                </div>
+
 
             </div>
-        </article>
+        </div>
 
 
     </main>
@@ -118,11 +233,11 @@
             <!-- footer end -->
 
             <div class="end row">
-                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 text-center">
-                    <a href="#">Copyright 2016</a>
+                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 pull-left text-center">
+                    <a href="#" title="Tooltip">Copyright 2016</a>
                 </div>
-                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-4 text-center">
-                    <a href="#">Media Temple</a>
+                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-4 pull-right text-center">
+                    <a href="#" title="Tooltip">Media Temple</a>
                 </div>
             </div>
         </div>
@@ -132,6 +247,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/my_jquery.js"></script>
+    <script src="js/owl.carousel.js"></script>
 
 </div>
 </body>

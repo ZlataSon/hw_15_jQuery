@@ -3,9 +3,104 @@
  */
 
 
+/**
+ * accordion
+ */
+
+$(".accordion dd").hide().prev().click(function() {
+    $(this).parents(".accordion").find("dd").not(this).slideUp().prev().removeClass("active");
+    $(this).next().not(":visible").slideDown().prev().addClass("active");
+});
+
+/**
+ * modal
+ */
+
+
+
+/**
+ * tabs
+ */
+
+$(document).ready(function(){
+    var tabs = $('#tabs');
+    $('.tabs-content > div', tabs).each(function(i){
+        if ( i != 0 ) $(this).hide(0);
+    });
+    tabs.on('click', '.tabs a', function(e){
+        /* Предотвращаем стандартную обработку клика по ссылке */
+        e.preventDefault();
+
+        /* Узнаем значения ID блока, который нужно отобразить */
+        var tabId = $(this).attr('href');
+
+        /* Удаляем все классы у якорей и ставим active текущей вкладке */
+        $('.tabs a',tabs).removeClass();
+        $(this).addClass('active');
+
+        /* Прячем содержимое всех вкладок и отображаем содержимое нажатой */
+        $('.tabs-content > div', tabs).hide(0);
+        $(tabId).show();
+    });
+});
+
+/**
+ * tooltip
+ */
+
+function simple_tooltip(target_items, name){
+    $(target_items).each(function(i){
+        $("body").append("<div class='"+name+"' id='"+name+i+"'><p>"+$(this).attr('title')+"</p></div>");
+        var my_tooltip = $("#"+name+i);
+
+        $(this).removeAttr("title").mouseover(function(){
+            my_tooltip.css({opacity:0.8, display:"none"}).fadeIn(400);
+        }).mousemove(function(kmouse){
+            my_tooltip.css({left:kmouse.pageX+15, top:kmouse.pageY+15});
+        }).mouseout(function(){
+            my_tooltip.fadeOut(400);
+        });
+    });
+}
+$(document).ready(function(){
+    simple_tooltip("a","tooltip");
+});
+
+
+
+
+/**
+ * Carousel slide-1
+ */
+
 $(document).ready(function() {
 
-    $("#owl-demo").owlCarousel({
+    $("#owl-demo-1").owlCarousel({
+
+        navigation : true, // Show next and prev buttons
+        slideSpeed : 300,
+        paginationSpeed : 400,
+        singleItem:true
+
+        // "singleItem:true" is a shortcut for:
+        // items : 1,
+        // itemsDesktop : false,
+        // itemsDesktopSmall : false,
+        // itemsTablet: false,
+        // itemsMobile : false
+
+    });
+
+});
+
+
+/**
+ * Carousel slide-2
+ */
+
+$(document).ready(function() {
+
+    $("#owl-demo-2").owlCarousel({
         items : 4,
         lazyLoad : true,
         navigation : true
@@ -13,22 +108,6 @@ $(document).ready(function() {
 
 });
 
-$(function($) {
-    var allAccordions = $('.accordion div.data');
-    var allAccordionItems = $('.accordion .accordion-item');
-    $('.accordion > .accordion-item').click(function() {
-        if($(this).hasClass('open'))
-        {
-            $(this).removeClass('open');
-            $(this).next().slideUp("slow");
-        }
-        else
-        {
-            allAccordions.slideUp("slow");
-            allAccordionItems.removeClass('open');
-            $(this).addClass('open');
-            $(this).next().slideDown("slow");
-            return false;
-        }
-    });
-});
+
+
+

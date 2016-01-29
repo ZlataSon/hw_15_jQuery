@@ -1,0 +1,35 @@
+/*===================
+   tooltip
+   ====================*/
+
+.part-tooltip {
+  text-align: center;
+  padding: 15px 5px;
+
+  a {
+    color: $bg-bright;
+    font-size: 12px;
+    font-weight: 300;
+    margin: 15px auto;
+    text-decoration: none;
+  }
+}
+
+.tooltip{
+  position:absolute;
+  z-index:999;
+  left:-9999px;
+  background-color: $bg-dark;
+  padding: 2px;
+  border: 0.2px solid #fff;
+  width: auto;
+}
+
+.tooltip p{
+  margin:0;
+  color:#fff;
+  background-color: $bg-bright;
+  padding: 2px 7px;
+}
+
+

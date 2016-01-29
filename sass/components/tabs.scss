@@ -1,0 +1,53 @@
+
+
+/*===================
+   tabs
+   ====================*/
+
+
+
+/* Tabs */
+#tabs {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin: 15px 5px;
+
+  ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background: $bg-dark;
+  }
+  a, a:hover {
+    text-decoration: none;
+  }
+
+}
+.tabs {
+    overflow: hidden;
+    border-bottom: 1px solid #ccc;
+}
+
+#tabs .tabs li {
+  float: left;
+}
+#tabs .tabs li + li {
+  border-left: 1px solid #ccc;
+}
+
+#tabs .tabs li a {
+  display: block;
+  padding: 8px 16px;
+  color: #999;}
+
+#tabs .tabs li a.active,
+#tabs .tabs li a:hover {
+  color: $bg-bright;
+}
+
+#tabs .tabs-content {
+  padding: 20px;
+}
+
+
+

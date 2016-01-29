@@ -1,0 +1,32 @@
+
+/*===================
+ accordion
+ ====================*/
+
+.accordion {
+
+  dl {
+    padding: 5px;
+    margin: 4px;
+    border-radius: 0.2em;
+    color: #ffffff;
+    background-color: $bg-bright;
+    box-shadow: 0 0.125em 0 rgb(171, 133, 0);
+    text-shadow: 0 -0.062em 0 rgba(171, 133, 0, 0.75);
+  }
+
+  dt {
+    padding: 10px;
+    font-size: 1em;
+  }
+
+  dd {
+    padding: 10px;
+    font-size: 0.8em;
+  }
+
+  p {
+    color: #ffffff;
+    font-size: 1em;
+  }
+}

@@ -11,10 +11,11 @@ body {
 
 .wrapper {
   overflow: hidden;
-  min-width: 320px;
+  min-width: 300px;
 }
 
 .container-fluid, .container {
+  margin: 0 auto;
   max-width: 1920px;
 }
 
@@ -23,79 +24,31 @@ body {
    ====================*/
 
 h2 {
-  color: $h2-color-1;
+  color: $bg-dark;
   font-size: 2.25em;
-  font-weight: 100;
+  font-weight: 700;
   line-height: 2.25em;
   margin-left: 15px;
+  text-align: center;
 }
 
-p, h5 {
-  color: $p-color-2;
+p {
+  color: $bg-dark;
   font-size: 0.75em;
   font-weight: 300;
   margin: 15px auto;
 }
 
-h3 {
-  color: $p-color-2;
-  font-size: 0.875em;
-  font-weight: 400;
-  line-height: 1.25em;
-}
 
 @media screen and (max-width: 900px) {
 
-  a, p, h2, h3, h5 {
+  a, p {
     font-size: 0.7em;
     line-height: 1em;
   }
 
   h2 {
+    font-size: 1em;
     font-weight: 900;
-  }
-
-  h3, h5 {
-    font-weight: 700;
-  }
-}
-
-/*===================
-   5 col. in bootstrap
-   ====================*/
-
-.col-xs-1-5,
-.col-sm-1-5,
-.col-md-1-5,
-.col-lg-1-5 {
-  position: relative;
-  min-height: 1px;
-  padding-right: 10px;
-  padding-left: 10px;
-}
-
-.col-xs-1-5 {
-  width: 20%;
-  float: left;
-}
-
-@media (min-width: 768px) {
-  .col-sm-1-5 {
-    width: 20%;
-    float: left;
-  }
-}
-
-@media (min-width: 992px) {
-  .col-md-1-5 {
-    width: 20%;
-    float: left;
-  }
-}
-
-@media (min-width: 1200px) {
-  .col-lg-1-5 {
-    width: 20%;
-    float: left;
   }
 }
