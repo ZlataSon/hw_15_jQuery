@@ -44,7 +44,7 @@ header {
     padding: 15px 10px 0 10px;
   }
 
-  .menu li{
+  .menu li {
     display: inline-block;
     position: relative;
     z-index: 100;
@@ -63,10 +63,10 @@ header {
     transition: all 0.2s ease-in-out 0s;
   }
 
-  .menu li a:hover, .menu li:hover > a{
-    color:#ffffff;
+  .menu li a:hover, .menu li:hover > a {
+    color: #ffffff;
     text-decoration: none;
-    background:  $bg-bright;
+    background: $bg-bright;
   }
 
   .lg-menu {
@@ -75,7 +75,8 @@ header {
   }
 
   /* hide the second level menu */
-  .menu ul {display: none;
+  .menu ul {
+    display: none;
     margin: 0;
     padding: 0;
     width: 150px;
@@ -86,29 +87,34 @@ header {
   }
 
   /* display second level menu on hover */
-  .menu li:hover > ul{ display: block;}
+  .menu li:hover > ul {
+    display: block;
+  }
 
-  .menu ul li {display:block;
+  .menu ul li {
+    display: block;
     float: none;
-    background:none;
-    margin:0;
-    padding:0;
+    background: none;
+    margin: 0;
+    padding: 0;
   }
 
   .menu ul li a {
-    font-size:12px;
-    font-weight:normal;
-    display:block;
+    font-size: 12px;
+    font-weight: normal;
+    display: block;
     color: #ffffff;
-    background: $bg-dark;}
+    background: $bg-dark;
+  }
 
-  .menu ul li a:hover, .menu ul li:hover > a{
+  .menu ul li a:hover, .menu ul li:hover > a {
     background: $bg-bright;
     color: $bg-dark;
   }
 
   /* change level 3 menu positions */
-  .menu ul ul {left: 149px;
+  .menu ul ul {
+    left: 149px;
     top: 0;
   }
 }
@@ -137,48 +143,49 @@ header {
   @media (max-width: 870px) {
 
     .menu {
-      display:none;
+      display: none;
     }
 
     .lg-menu {
       text-align: left;
     }
 
-    .mobile-menu{
-      display:block;
+    .mobile-menu {
+      display: block;
       margin-top: 50px;
     }
 
-    nav{
-      margin:0;
-      background:none;
+    nav {
+      margin: 0;
+      background: none;
     }
 
     .menu li {
-      display:block;
-      margin:0;
+      display: block;
+      margin: 0;
     }
 
     .menu li a {
       background: $bg-dark;
       color: #ffffff;
-      border-top:1px solid #ffffff;
-      border-left:3px solid #ffffff;}
+      border-top: 1px solid #ffffff;
+      border-left: 3px solid #ffffff;
+    }
 
-    .menu li a:hover, .menu li:hover > a{
+    .menu li a:hover, .menu li:hover > a {
       background: $bg-bright;
       color: $bg-dark;
-      border-top:1px solid #ffffff;
-      border-left:3px solid #ffffff;
+      border-top: 1px solid #ffffff;
+      border-left: 3px solid #ffffff;
     }
 
     /*level 2 and 3 - make same width as all items*/
     .menu ul {
-      display:block;
-      position:relative;
-      top:0;
-      left:0;
-      width:100%;
+      display: block;
+      position: relative;
+      top: 0;
+      left: 0;
+      width: 100%;
       text-align: center;
     }
 
@@ -187,15 +194,17 @@ header {
       text-align: right;
     }
 
-  }/*end media queries*/
+  }
+  /*end media queries*/
 }
-  /*===================
-   випадаюче меню без кліка
-   ====================*/
+
+/*===================
+ випадаюче меню без кліка
+ ====================*/
 
 header ul.nav li.dropdown:hover > ul.dropdown-menu {
-    display: block;
-  }
+  display: block;
+}
 
 
 

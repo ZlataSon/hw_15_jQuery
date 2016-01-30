@@ -3,10 +3,9 @@
    ====================*/
 
 .modal-form {
- background: $bg-bright;
+  background: $bg-bright;
   min-height: 20em;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  margin: 40px 0;
   text-align: center;
 
   .js-open-modal {
@@ -87,7 +86,7 @@ a.close:hover {
 }
 
 form input {
-    width: 150px;
+  width: 150px;
 }
 
 
