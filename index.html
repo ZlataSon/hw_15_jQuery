@@ -33,38 +33,38 @@
 
     <header>
         <div class="container-fluid">
-
+            <div class="row text-center">
+                <a id="part-menu" href="index.html" class="logo"><img src="img/logo.svg" class="img-responsive" alt="Raspberry"> Raspberry</a>
+            </div>
             <!--  hamburger -->
-            <a id="touch-menu" class="mobile-menu" href="#"><img src="img/list.png" alt="Owl Image">
-                  Menu
-            </a>
+            <a id="touch-menu" class="mobile-menu" href="#"> <img src="img/list.png" alt="Owl Image">  Menu</a>
             <nav>
                 <ul class="menu">
-                    <li><a href="#" class="lg-menu">Home</a>
+                    <li><a href="#part-menu" class="lg-menu">Home</a>
                         <ul class="sub-menu">
                             <li><a href="#">Sub-Menu 1</a></li>
                             <li><a href="#">Sub-Menu 2</a></li>
                             <li><a href="#">Sub-Menu 3</a></li>
                         </ul>
                     </li>
-                    <li><a href="#" class="lg-menu">Accordion</a>
+                    <li><a href="#part-accordion" class="lg-menu">Accordion</a>
                         <ul class="sub-menu">
                             <li><a href="#">Sub-Menu 1</a></li>
                             <li><a href="#">Level 3 Menu</a>
                                 <ul>
-                                    <li><a href="#">Item 1</a></li>
-                                    <li><a href="#">Item 2</a></li>
-                                    <li><a href="#">Item 3</a></li>
+                                    <li><a href="#item-1">Item 1</a></li>
+                                    <li><a href="#item-2">Item 2</a></li>
+                                    <li><a href="#item-3">Item 3</a></li>
                                 </ul>
                             </li>
                         </ul>
                     </li>
-                    <li><a href="#" class="lg-menu">Modal</a></li>
-                    <li><a href="#" class="lg-menu">Tabs</a></li>
-                    <li><a href="#" class="lg-menu">Tooltip</a></li>
-                    <li><a href="#" class="lg-menu">Slide-1</a></li>
-                    <li><a href="#" class="lg-menu">Slide-2</a></li>
-                    <li><a href="#" class="lg-menu">Media Temple</a></li>
+                    <li><a href="#part-modal" class="lg-menu">Modal</a></li>
+                    <li><a href="#part-tabs" class="lg-menu">Tabs</a></li>
+                    <li><a href="#part-tooltip" class="lg-menu">Tooltip</a></li>
+                    <li><a href="#part-slide-1" class="lg-menu">Slide-1</a></li>
+                    <li><a href="#part-slide-2" class="lg-menu">Slide-2</a></li>
+                    <li><a href="#part-end" class="lg-menu">Media Temple</a></li>
                 </ul>
             </nav>
         </div>
@@ -76,11 +76,11 @@
 
         <!-- accordion -->
 
-        <div class="accordion">
+        <div id="part-accordion" class="accordion">
             <div class="container-fluid">
                 <h2>1. Accordion</h2>
                 <dl>
-                    <dt>Item 1</dt>
+                    <dt id="item-1">Item 1</dt>
                     <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam ea, accusamus. Numquam non
                         commodi ipsum debitis repudiandae amet vero itaque, deserunt, ad neque libero quae officia.
                         Facilis non, possimus doloribus! Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -89,7 +89,7 @@
                     </dd>
                 </dl>
                 <dl>
-                    <dt>Item 2</dt>
+                    <dt id="item-2">Item 2</dt>
                     <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid quis voluptatem repellat?
                         Blanditiis iste, exercitationem porro, magni amet cupiditate enim, labore tenetur, praesentium
                         quam consequuntur nesciunt. Culpa dicta adipisci voluptatem.
@@ -101,7 +101,7 @@
                     </dd>
                 </dl>
                 <dl>
-                    <dt>Item 3</dt>
+                    <dt id="item-3">Item 3</dt>
                     <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam ea, accusamus. Numquam non
                         commodi ipsum debitis repudiandae amet vero itaque, deserunt, ad neque libero quae officia.
                         Facilis non, possimus doloribus! Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -118,15 +118,33 @@
 
 
         <!-- modal -->
-        <div>
+        <div id="part-modal" class="modal-form">
             <div class="container-fluid">
                 <h2>2. Modal</h2>
+                <a class="js-open-modal" href="#" data-modal-id="popup"> Click me </a>
+                <div id="popup" class="modal-box">
+                    <header>
+                        <a href="#" class="js-modal-close close">×</a>
+                        <h3 class="text-left"><a href="#">Modal form</a> Title</h3>
+                    </header>
+                    <div class="modal-body">
+                        <form>
+                            <label for="login">Login:</label><br>
+                            <input type="text" name="login" id="login" /><br>
 
+                            <label for="password">Password:</label><br>
+                            <input type="password" name="password" id="password" />
+                        </form>
+                    </div>
+                    <footer>
+                        <a href="#" class="js-modal-close">Send</a>
+                    </footer>
+                </div>
             </div>
         </div>
 
         <!-- tabs -->
-        <div>
+        <div id="part-tabs">
             <div class="container-fluid">
                 <h2>3. Tabs</h2>
 
@@ -188,7 +206,7 @@
         </div>
 
         <!-- tooltip -->
-        <div class="part-tooltip">
+        <div id="part-tooltip" class="part-tooltip">
             <div class="container-fluid">
                 <h2>4. Tooltip</h2>
                 <a href="#" title="Tooltip">Tooltips are also useful for form elements, to show some additional
@@ -201,11 +219,11 @@
                     nulla mattis commodo. Ut sagittis. Donec nisi lectus, feugiat porttitor, tempor ac,
                     tempor vitae, pede. Aenean vehicula velit eu tellus interdum rutrum. Maecenas commodo.
                     Pellentesque nec elit.
-                    <a href="#" title="Tooltip">Tooltips are also useful for form elements, to show some additional
+                    <a href="#" title="Tooltip. Duis cursus.">Tooltips are also useful for form elements, to show some additional
                         information in the context of each field.</a>
                     Fusce in lacus. Vivamus a libero vitae lectus hendrerit
                     hendrerit.</p>
-                <a href="#" title="Tooltip">Tooltips are also useful for form elements, to show some additional
+                <a href="#" title="Tooltip. Fusce in lacus.">Tooltips are also useful for form elements, to show some additional
                     information in the context of each field.</a>
 
                 <div class="tooltip">
@@ -215,7 +233,7 @@
         </div>
 
         <!-- slide 1 -->
-        <div class="slide_1">
+        <div id="part-slide-1" class="slide_1">
             <div class="container-fluid">
                 <h2>5. Slide-1</h2>
 
@@ -231,7 +249,7 @@
         </div>
 
         <!-- slide 2 -->
-        <div class="slide_2">
+        <div id="part-slide-2" class="slide_2">
             <div class="container-fluid">
                 <h2>6. Slide-2</h2>
 
@@ -263,7 +281,7 @@
 
     <!-- footer -->
 
-    <footer>
+    <footer id="part-end">
         <div class="container-fluid">
             <!-- footer end -->
 

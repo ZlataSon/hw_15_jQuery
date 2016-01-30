@@ -1,3 +1,14 @@
+
+/**
+ * scrolling web-page
+ */
+
+$('nav a[href^="#"]').click(function(){
+    var target = $(this).attr('href');
+    $('html, body').animate({scrollTop: $(target).offset().top - 50}, 1000);
+    return false;
+});
+
 /**
  * header  hamburger
  */
@@ -34,7 +45,43 @@ $(".accordion dd").hide().prev().click(function() {
  * modal
  */
 
+$(function(){
 
+    var appendthis =  ("<div class='modal-overlay js-modal-close'></div>");
+
+    $('a[data-modal-id]').click(function(e) {
+        e.preventDefault();
+        $("body").append(appendthis);
+        $(".modal-overlay").fadeTo(400, 0.7);
+        //$(".js-modalbox").fadeIn(500);
+        var modalBox = $(this).attr('data-modal-id');
+        $('#'+modalBox).fadeIn($(this).data());
+    });
+
+
+    $(".js-modal-close, .modal-overlay").click(function() {
+        $(".modal-box, .modal-overlay").fadeOut(500, function() {
+            $(".modal-overlay").remove();
+        });
+    });
+
+    $(window).resize(function() {
+        $(".modal-box").css({
+            top: 350+($(window).height() - $(".modal-box").outerHeight()) / 3,
+            left: ($(window).width() - $(".modal-box").outerWidth()) / 2
+        });
+    });
+
+    $(window).resize(function() {
+        $(".modal-overlay").css({
+            top: 350+($(window).height() - $(".modal-box").outerHeight()) / 2,
+            left: ($(window).width() - $(".modal-overlay").outerWidth()) / 2
+        });
+    });
+
+    $(window).resize();
+
+});
 
 /**
  * tabs
@@ -62,6 +109,8 @@ $(document).ready(function(){
     });
 });
 
+
+
 /**
  * tooltip
  */
@@ -83,7 +132,6 @@ function simple_tooltip(target_items, name){
 $(document).ready(function(){
     simple_tooltip(".part-tooltip a","tooltip");
 });
-
 
 
 

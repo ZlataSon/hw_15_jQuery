@@ -4,7 +4,7 @@
 
 header {
   background: $bg-dark;
-  margin: 33px auto 37px auto;
+  padding: 25px auto 10px auto;
 
   a {
     margin: 5px 5px 21px 5px;
@@ -17,6 +17,21 @@ header {
       text-decoration: none;
     }
   }
+
+  .logo {
+    display: inline-block;
+    margin: 20px auto;
+    max-width: 100px;
+    height: auto;
+    color: #ffffff;
+    font-size: 1em;
+    font-weight: 700;
+  }
+
+  nav {
+    margin: 0 auto;
+    text-align: center;
+  }
 }
 
 /*===================
@@ -26,6 +41,7 @@ header {
 header {
   .menu {
     display: block;
+    padding: 15px 10px 0 10px;
   }
 
   .menu li{
@@ -122,6 +138,10 @@ header {
 
     .menu {
       display:none;
+    }
+
+    .lg-menu {
+      text-align: left;
     }
 
     .mobile-menu{
