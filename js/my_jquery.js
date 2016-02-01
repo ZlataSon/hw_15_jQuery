@@ -61,7 +61,7 @@ $(function(){
 
     $(".js-modal-close, .modal-overlay").click(function() {
         $(".modal-box, .modal-overlay").fadeOut(500, function() {
-            $(".modal-overlay").remove();
+            $(".modal-overlay").remove();  // закрываем попап кнопками и убираем фон
         });
     });
 
@@ -69,18 +69,29 @@ $(function(){
         $(".modal-box").css({
             top: 350+($(window).height() - $(".modal-box").outerHeight()) / 3,
             left: ($(window).width() - $(".modal-box").outerWidth()) / 2
-        });
+        });   // позиция попапа - не довольна, позиция относительно всей страницы, а не видимой области
     });
 
     $(window).resize(function() {
         $(".modal-overlay").css({
             top: 350+($(window).height() - $(".modal-box").outerHeight()) / 2,
             left: ($(window).width() - $(".modal-overlay").outerWidth()) / 2
-        });
+        });  // позиция фона попапа - все тоже самое
     });
 
     $(window).resize();
 
+});
+
+jQuery(function($){
+    $(document).mouseup(function (e){ // событие клика по веб-документу
+        var div = $("#popup"); // тут указываем ID элемента
+        if (!div.is(e.target) // если клик был не по нашему блоку
+            && div.has(e.target).length === 0) { // и не по его дочерним элементам
+            div.hide(); // скрываем его
+            $(".modal-overlay").remove(); // и фон тоже
+        }
+    });
 });
 
 /**
